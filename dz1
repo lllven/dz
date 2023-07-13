@@ -50,29 +50,32 @@ if len(num1) > 0:
 else:
     print('Введите число!')
 
-num1 = int(input('Введите число, '))
-if num1 >= 0 or num1 <0:
-    num2 = int(input('Введите второе число, '))
-    if num2 >= 0 or num2 < 0:
-        num3 = int(input('Введите третье число, '))
-        if num3 >= 0 or num3 < 0:
+num1 = input('Введите число, ')
+if len(num1) > 0:
+    n1 = int(num1)
+    num2 = input('Введите второе число, ')
+    if len(num2) > 0:
+        n2 = int(num2)
+        num3 = input('Введите третье число, ')
+        if len(num3) > 0:
+            n3 = int(num3)
             choice = input("Выберите наибольшее '>', наименьшее '<', среднее '~', ")
             if choice == '>':
-                if num1 > num2 and num1 > num3:
-                    print(num1)
-                elif num1 < num2 > num3:
-                    print(num2)
-                elif num1 < num3 > num2:
-                    print(num3)
+                if n1 > n2 and n1 > n3:
+                    print(n1)
+                elif n1 < n2 > n3:
+                    print(n2)
+                elif n1 < n3 > n2:
+                    print(n3)
             elif choice == '<':
-                if num2 > num1 < num3:
-                    print(num1)
-                elif num1 > num2 < num3:
-                    print(num2)
-                elif num1 > num3 < num2:
+                if n2 > n1 < n3:
+                    print(n1)
+                elif n1 > n2 < n3:
+                    print(n2)
+                elif n1 > n3 < n2:
                     print(num3)
             elif choice == '~':
-                print((num1 + num2 + num3) / 3)
+                print((n1 + n2 + n3) / 3)
             else:
                 print("Выберите наибольшее '>', наименьшее '<', среднее '~'!")
         else:
@@ -82,14 +85,15 @@ if num1 >= 0 or num1 <0:
 else:
     print('Введите число!')
 
-nv = float(input('Введите число, '))
-if nv > 0:
+nv = input('Введите число, ')
+if len(nv) > 0:
+    n = float(nv)
     nv1 = input("Введите ед измерения 'miles', 'inches', 'yards' ")
     if nv1 == 'miles':
-        print(round((nv / 1609.34), 2))
+        print(round((n / 1609.34), 2))
     elif nv1 == 'inches':
-        print(round((nv * 39.3701), 2))
+        print(round((n * 39.3701), 2))
     elif nv1 == 'yards':
-        print(round((nv / 1.09361), 2))
+        print(round((n / 1.09361), 2))
 else:
     print('Введите число!')

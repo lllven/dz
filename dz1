@@ -27,26 +27,28 @@ x = int(num[:1]) * int(num[1:2]) * int(num[2:3]) * int(num[3:4]) * int(num[-1:])
 print(x)
 
 
-num1 = int(input('Введите число, '))
-if num1 >= 0 or num1 <0:    # эти проверки бесполезны
-    num2 = int(input('Введите второе число, '))
-    if num2 >= 0 or num2 < 0:
-        num3 = int(input('Введите третье число, '))
-        if num3 >= 0 or num3 < 0:
+num1 = input('Введите число, ')
+if len(num1) > 0:
+    nu1 = int(num1)
+    num2 = input('Введите второе число, ')
+    if len(num2) > 0:
+        nu2 = int(num2)
+        num3 = input('Введите третье число, ')
+        if len(num3) > 0:
+            nu3 = int(num3)
             choice = input("Выберите сумму '+' или произведение '*', ")
             if choice == '+':
-                print(num1 + num2 + num3)
+                print(nu1 + nu2 + nu3)
             elif choice == '*':
-                print(num1 * num2 * num3)
+                print(nu1 * nu2 * nu3)
             else:
                 print("Выберите сумму '+' или произведение '*'!")
         else:
             print('Введите третье число!')
     else:
-        print('Введите второе число!')  # это тоже ничего не работает
+        print('Введите второе число!')
 else:
     print('Введите число!')
-
 
 num1 = int(input('Введите число, '))
 if num1 >= 0 or num1 <0:

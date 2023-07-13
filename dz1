@@ -1,0 +1,93 @@
+str3 = 'abcde'
+print(str3[:2] + str3[-1:])
+
+a = 10
+b = 2
+f = a + b
+c = a - b
+r = a * b
+t = a / b
+print('сумма', f, 'разность', b, 'произведение', r, 'частное', t)
+
+c1 = 15
+d = 2
+result = c1 + d
+print(result)
+
+str11 = 'Привет, Мир!'
+print(str11)
+
+str1 = 'Привет, '
+str2 = 'Мир!'
+print(str1 + str2)
+
+
+num = '12345'
+x = int(num[:1]) * int(num[1:2]) * int(num[2:3]) * int(num[3:4]) * int(num[-1:])
+print(x)
+
+
+num1 = int(input('Введите число, '))
+if num1 >= 0 or num1 <0:    # эти проверки бесполезны
+    num2 = int(input('Введите второе число, '))
+    if num2 >= 0 or num2 < 0:
+        num3 = int(input('Введите третье число, '))
+        if num3 >= 0 or num3 < 0:
+            choice = input("Выберите сумму '+' или произведение '*', ")
+            if choice == '+':
+                print(num1 + num2 + num3)
+            elif choice == '*':
+                print(num1 * num2 * num3)
+            else:
+                print("Выберите сумму '+' или произведение '*'!")
+        else:
+            print('Введите третье число!')
+    else:
+        print('Введите второе число!')  # это тоже ничего не работает
+else:
+    print('Введите число!')
+
+
+num1 = int(input('Введите число, '))
+if num1 >= 0 or num1 <0:
+    num2 = int(input('Введите второе число, '))
+    if num2 >= 0 or num2 < 0:
+        num3 = int(input('Введите третье число, '))
+        if num3 >= 0 or num3 < 0:
+            choice = input("Выберите наибольшее '>', наименьшее '<', среднее '~', ")
+            if choice == '>':
+                if num1 > num2 and num1 > num3:
+                    print(num1)
+                elif num1 < num2 > num3:
+                    print(num2)
+                elif num1 < num3 > num2:
+                    print(num3)
+            elif choice == '<':
+                if num2 > num1 < num3:
+                    print(num1)
+                elif num1 > num2 < num3:
+                    print(num2)
+                elif num1 > num3 < num2:
+                    print(num3)
+            elif choice == '~':
+                print((num1 + num2 + num3) / 3)
+            else:
+                print("Выберите наибольшее '>', наименьшее '<', среднее '~'!")
+        else:
+            print('Введите третье число!')
+    else:
+        print('Введите второе число!')
+else:
+    print('Введите число!')
+
+nv = float(input('Введите число, '))
+if nv > 0:
+    nv1 = input("Введите ед измерения 'miles', 'inches', 'yards' ")
+    if nv1 == 'miles':
+        print(round((nv / 1609.34), 2))
+    elif nv1 == 'inches':
+        print(round((nv * 39.3701), 2))
+    elif nv1 == 'yards':
+        print(round((nv / 1.09361), 2))
+else:
+    print('Введите число!')
